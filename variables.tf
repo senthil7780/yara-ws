@@ -1,6 +1,10 @@
 variable "aws_region" {
   default     = "ap-southeast-1"
 }
+
+variable "aws_availability_zone" {
+    default = "ap-southeast-1a"
+}
 variable "ami_key_pair_name" {
   default = "mykeypair"
 } 
