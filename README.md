@@ -18,8 +18,10 @@ Approach i took to complete the exercise
 13) use the file provisioner to copy the script
 14) use the remote-exec to install jenkins along with java 8
 
-while i am working i found out that my aws account was compromised and have to wait until i setup a new account.
+while i am working i found out that my aws account was compromised  due to some careless mistake and have to wait until i setup a new account.
 
 until now the task took around 3.5 hrs without writing unit tests. I have not practised unit tests earlier hence i will take some time.
+
+Inputs: Apart from the access key, secret key & region, we could parameterize the all the names of the resources and size of the EBS block and their availability zones. we could setup appropriate user and role for jenkins by provisioning optimal roles for the EC2 instance.
 
 
