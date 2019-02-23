@@ -19,3 +19,7 @@ Approach i took to complete the exercise
 14) use the remote-exec to install jenkins along with java 8
 
 while i am working i found out that my aws account was compromised and have to wait until i setup a new account.
+
+The whole task took 3 hrs or more without writing unit tests. I have not practised unit tests earlier hence i will take some time.
+
+
