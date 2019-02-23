@@ -27,3 +27,4 @@ Inputs: Apart from the access key, secret key & region, we could parameterize th
 For extensiblity with other teams/reusing for multiple environments, i would keep the state file uploaded into s3 bucket and pass variables outside from the state file to keep it modularized.
 
 
+
