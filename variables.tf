@@ -5,7 +5,6 @@ variable "aws_availability_zone" {
     default = "ap-southeast-1b"
 }
 variable "ami_key_pair_name" {
-  default = "mykeypair"
 } 
 variable "aws_instance_type" {
   default = "m3.medium"
@@ -18,5 +17,4 @@ variable "subnet_address_space" {
 }
 
 variable "private_key_path" {
-    default = "mykeypair.pem"
 }
