@@ -20,6 +20,6 @@ Approach i took to complete the exercise
 
 while i am working i found out that my aws account was compromised and have to wait until i setup a new account.
 
-The whole task took 3 hrs or more without writing unit tests. I have not practised unit tests earlier hence i will take some time.
+until now the task took around 3.5 hrs without writing unit tests. I have not practised unit tests earlier hence i will take some time.
 
 
