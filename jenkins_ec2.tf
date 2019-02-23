@@ -5,7 +5,22 @@ resource "aws_instance" "jenkins_ec2" {
   key_name =  "${var.ami_key_pair_name}"
   subnet_id = "${aws_subnet.jenkins-subnet.id}"
   vpc_security_group_ids = ["${aws_security_group.jenkins_sg.id}"]
-  user_data = "${file("jenkins-setup.sh")}"
+  #user_data = "${file("./scripts/jenkins-setup.sh")}"
+
+  connection {
+    user = "ec2-user"
+    private_key = "${file(var.private_key_path)}"
+  }
+  provisioner "file" {
+    source = "./scripts/jenkins-setup.sh"
+    destination = "/tmp/jenkins-setup.sh"
+  }
+  provisioner "remote-exec" {
+    inline = [
+     "chmod +x /tmp/jenkins-setup.sh",
+     "/tmp/jenkins-setup.sh",
+    ]
+  }
 
   tags {
     Name = "jenkins_server"
@@ -28,6 +43,7 @@ resource "aws_internet_gateway" "jenkins-igw" {
 resource "aws_subnet" "jenkins-subnet" {
   cidr_block = "${var.subnet_address_space}"
   vpc_id = "${aws_vpc.jenkins-vpc.id}"
+  availability_zone = "${var.aws_availability_zone}"
   map_public_ip_on_launch = "true"
 }
 
