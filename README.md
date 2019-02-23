@@ -24,4 +24,6 @@ until now the task took around 3.5 hrs without writing unit tests. I have not pr
 
 Inputs: Apart from the access key, secret key & region, we could parameterize the all the names of the resources and size of the EBS block and their availability zones. we could setup appropriate user and role for jenkins by provisioning optimal roles for the EC2 instance.
 
+For extensiblity with other teams/reusing for multiple environments, i would keep the state file uploaded into s3 bucket and pass variables outside from the state file to keep it modularized.
+
 
